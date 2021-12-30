@@ -1,0 +1,20 @@
+<p>select works!</p>
+<h1>Selected Value :{{selectedValue}}</h1>
+<h1> <button type="button" class="btn btn-primary btn-sm" (click)="removeItemStorage('estado')">
+  Remove name local storage
+  </button></h1>
+
+
+  <div class="form-group">
+<select [(ngModel)]="selectedValue" (change)="onChange($event)"class="form-control">
+
+  <option *ngFor="let estado of estados" [value]="estado.id">
+    {{ estado.label }}
+  </option>
+</select>
+</div>
+
+
+
+
+
